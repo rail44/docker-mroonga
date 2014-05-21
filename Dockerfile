@@ -3,4 +3,5 @@ ADD ./sources.list /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install -y --allow-unauthenticated groonga-keyring
 RUN apt-get update
+RUN apt-get upgrade -y -o Dpkg::Options::="--force-confold"
 RUN apt-get install -y mysql-server-mroonga groonga-normalizer-mysql groonga-tokenizer-mecab
